@@ -1,0 +1,89 @@
+.heart {
+  fill: #ff0000;
+  animation: Pulse 1s infinite;
+  transform-origin: center;
+}
+.heart--center {
+  fill: #ff0000;
+  animation: PulseCenter 1s infinite;
+  transform-origin: center;
+}
+svg {
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  width: 100%;
+}
+
+.square {
+  fill: #ff9999;
+  stroke: #cc0000;
+  stroke-width: 5px;
+  animation: colorChange 2s infinite alternate;
+}
+
+.rectangle {
+  fill: #99ccff;
+  stroke: #0033cc;
+  stroke-width: 5px;
+  animation: colorChange 4s infinite alternate, rotate 15s linear infinite;
+}
+
+.circle {
+  fill: #99ff99;
+  stroke: #009933;
+  stroke-width: 5px;
+  animation: colorChange 10s infinite alternate;
+}
+
+.ellipse {
+  fill: #ffff99;
+  stroke: #cccc00;
+  stroke-width: 5px;
+  animation: colorChange 2s infinite alternate,
+    rotate 10s alternate-reverse infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    fill: #99ff99;
+    stroke: #009933;
+  }
+  100% {
+    fill: #ffccff;
+    stroke: #cc33cc;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes Pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes PulseCenter {
+  0% {
+    transform: rotate(45deg) scale(1);
+  }
+  50% {
+    transform: rotate(45deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(45deg) scale(1);
+  }
+}
