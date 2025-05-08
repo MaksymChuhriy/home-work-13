@@ -9,7 +9,9 @@
   transform-origin: center;
 }
 svg {
+  
   border: 1px solid #ccc;
+  
   background: #f9f9f9;
   width: 100%;
 }
